@@ -62,7 +62,7 @@ cat example.txt | sed s/x/y/
 
 ```
 
-## Extracting Text (e-g, ip address) from a single file and then saving it in a file
+## Extracting Text (e-g, ip address) from a single file with awk
 
 For example a log file can contain important information - an exampe of one of the lines in the log file is below
 
@@ -74,8 +74,15 @@ Here I can use awk to extract date and username by using the following command
 awk '{print $4, $6}' name_of_thefile_containing_loginfo
 ```
 Above the numbers represent the 4th and the 6th field which in this example are the date and the username <br>
+The dields are printed in order as specified in the command. For example if I list $6 before $4 then the username will get printed first
 Note that the above command will only display the extracted text into the terminal and if I want to save the information into a new file then:
 
 ```
 awk '{print $4, $6}' name_of_thefile_containing_loginfo > name_of_newfile
+```
+
+- We can also use other parameters as separaters for example , in the csv files
+
+```
+awk -F, '{print $2}' file_containing_logs > newfile
 ```
