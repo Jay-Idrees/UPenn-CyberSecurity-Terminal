@@ -1,6 +1,24 @@
 
 # Terminal Command Basics in Linux (Ubuntu)
 
+
+## Moving a file to a current directory
+
+- mv `path to the current directory and file` . 
+Note that the '.' itself 
+```
+mv /folderA/folderB/folderC/filename_to_be_copied.txt 
+```
+
+Moving a file from one directory to another
+
+```
+mv /folderA/folderB/folderC/filename_to_be_copied.txt  /folderA/folderB
+```
+
+Note that if I type `cd /folderB/folderC/' It will take me directly to the desired folderC<br>
+Otherwise I will have to first do cd folderB ls and then cd folderC
+
 ## Searching with grep
 
 The main command is `grep`.
@@ -29,7 +47,7 @@ grep -il example_word * | wc -l >> example_filename
 wc with the specification of -l is counting the number of lines with text in the file. In this case as we expect that each of the line will be the name of the files with the word, so this count will also the count of the files in which the word/ string was found<br>
 '>>' means appending
 
-## Changing text inside the files with sed
+## Substituting text inside the files with sed
 The main command is `sed`
 
 - sed s/`Word to be replaced`/`Word to replace with`
@@ -42,4 +60,22 @@ For instance in order to replace the word x with y in file example.txt I will ha
 ```
 cat example.txt | sed s/x/y/
 
+```
+
+## Extracting Text (e-g, ip address) from a single file and then saving it in a file
+
+For example a log file can contain important information - an exampe of one of the lines in the log file is below
+
+> 109.169.248.247 - - [12/Dec/2015:18:25:11] ACCESS_DENIED JaneDoe index.php HTTP/1.1 200 4494
+
+Here I can use awk to extract date and username by using the following command
+
+```
+awk '{print $4, $6}' name_of_thefile_containing_loginfo
+```
+Above the numbers represent the 4th and the 6th field which in this example are the date and the username <br>
+Note that the above command will only display the extracted text into the terminal and if I want to save the information into a new file then:
+
+```
+awk '{print $4, $6}' name_of_thefile_containing_loginfo > name_of_newfile
 ```
