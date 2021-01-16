@@ -86,3 +86,4 @@ awk '{print $4, $6}' name_of_thefile_containing_loginfo > name_of_newfile
 ```
 awk -F, '{print $2}' file_containing_logs > newfile
 ```
+Here -F is an option for field separation -here I am instructing to identify fields based on the separation by commas
