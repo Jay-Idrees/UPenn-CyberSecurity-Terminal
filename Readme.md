@@ -92,5 +92,31 @@ Here -F is an option for field separation -here I am instructing to identify fie
 Similarly for separation by space 
 
 
+## Shell scripting 
+
+> Creating a shell file
+
+1. Note that nano is a file text editor in the terminal, but it can also be used to creat shell files. 
+
+`nano example_shell_filename.sh`
+
+> Writing commands inside the shell file
+
+- You can open the sh file for EDITING (note that its not the same as running the file) using `nano example_shell_filename.sh` - yes the command is the same for creating an sh file and then editing it, and then pastes the following lines of code:
+
+```
+mkdir shellscripts
+mv scriptX.sh scripts
+```
+
+the run the example_shell_filename.sh containing the code above <br>
+We can run the following command:
+```
+sh example_shell_filename.sh
+```
+
+
+
+
 `nano`
 ## Using the file editor nano
