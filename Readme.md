@@ -102,7 +102,8 @@ Similarly for separation by space
 
 > Writing commands inside the shell file
 
-- You can open the sh file for EDITING (note that its not the same as running the file) using `nano example_shell_filename.sh` - yes the command is the same for creating an sh file and then editing it, and then pastes the following lines of code:
+- You can open the sh file for EDITING (note that its not the same as running the file) using `nano example_shell_filename.sh` - yes the command is the same for creating an sh file and then editing it <br>
+Then pastes the following lines of code:
 
 ```
 mkdir shellscripts
@@ -114,8 +115,6 @@ We can run the following command:
 ```
 sh example_shell_filename.sh
 ```
-
-
 
 
 `nano`
