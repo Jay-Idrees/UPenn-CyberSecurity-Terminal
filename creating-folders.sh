@@ -29,8 +29,11 @@ touch Notes_Dealer_Analysis
 cd ../
 cd Player_Dealer_Correlation
 touch Notes_Player_Dealer_Correlation
-cd /Lucky_Duck_Investigations
+
 
 # Moving back to the Luky_Dealer_Investigation directory
 cd ../../
+
+# Setting up evidence files
+# wget "https://tinyurl.com/3-HW-setup-evidence" && chmod +x ./3-HW-setup-evidence && ./3-HW-setup-evidence
 
