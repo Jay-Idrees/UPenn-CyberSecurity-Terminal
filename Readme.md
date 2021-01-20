@@ -19,6 +19,30 @@ mv /folderA/folderB/folderC/filename_to_be_copied.txt  /folderA/folderB
 Note that if I type `cd /folderB/folderC/' It will take me directly to the desired folderC<br>
 Otherwise I will have to first do cd folderB ls and then cd folderC
 
+
+## Finding files and folders
+
+   - `find`: Command line command used to locate a file or a directory.
+
+   - `type f`: find files.
+
+   - `type d` : find directories.
+
+   - `name`: Additional option used for finding specific file or directory names.
+
+   - `iname`: for case insensitive search.
+
+   - *1013* : Having the the * around the text instructs that the specified text can be anywhere in the file name.  
+
+
+`find -type d -iname searchword_in_folder_Name`
+
+`find -type f -inname *1013*`
+
+
+
+
+
 `grep`
 ## Searching with grep
 
@@ -119,3 +143,21 @@ sh example_shell_filename.sh
 
 `nano`
 ## Using the file editor nano
+
+```
+nano example_filename
+```
+Nano can be used to create a new text file or to edit existing ones. 
+
+## Creating an IP lookup tool
+
+- Creating a shell script file using nano
+
+`nano iplookup.sh`
+
+- Pasting the following command into the shellscript
+```
+curl -s http://ipinfo.io/$1 | grep country | awk -F: '{print $2}'
+```
+
+- Note that the shell scripts can also take arguments 
