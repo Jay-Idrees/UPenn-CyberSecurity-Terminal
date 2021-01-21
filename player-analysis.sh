@@ -25,4 +25,20 @@ cp ./03-Terminal/Roulette_Player_WinLoss_0310/Roulette_Player_WinLoss_0310/{0310
 
 
 # Extract data from specific files and then save it into the files
+grep -e -  -- 0310_win_loss_player_data 0312_win_loss_player_data 0315_win_loss_player_data > Roulette_Losses
 
+# counting the total number of times Schmidt played
+grep -i schmidt  -- 0310_win_loss_player_data 0312_win_loss_player_data 0315_win_loss_player_data | grep -c -i  schmidt
+
+# Counting the total number of times Schmidt was playing during losses 
+grep -e -  -- 0310_win_loss_player_data 0312_win_loss_player_data 0315_win_loss_player_data | grep -c -i  schmidt
+
+
+Losses eachday
+0310- 5
+0312- 5
+0315- 3
+
+The player Mylie Schmidt  was playing at all the time during Losses
+
+The player Mylie Schmidt played a total of 19 times of which 13 times he played during losses. Every time there was a loss Schmidt was playing 
